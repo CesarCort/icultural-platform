@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="user-scalable=no,maximum-scale=1.0,width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom-style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+
+  <title></title>
+</head>
+  <body>
+    <!--Navbar-->
+        <nav class = "navbar navbar-dark navbar-custom navbar-expand-lg navbar-light bg-light" style="background:#0b3896;">
+          <a class= "navbar-brand" href="./index.html">Crosland</a>
+          <!--button responsive menu-->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" >
+            <span class="navbar-toggler-icon navbar-dark"></span>
+          </button>
+          <!---->
+          <div class="collapse navbar-collapse " id="navbarTogglerDemo011">
+
+              <ul class="nav navbar-nav ml-auto">
+
+                <li class="nav-item">
+                  <a class="nav-link" href="register.html">
+                    <i class="fas fa-user-plus"></i> 360 </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="login.html">
+                    <i class="fas fa-sign-in-alt"></i> Cerrar sesión</a>
+                </li>
+              </ul>
+            </div>
+
+        </nav>
+    <!--End Navbar-->
+
+    <div class="container">
+
+      <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb col-6 col-sm-6 col-md-3 col-lg-3" style="margin-top:20px;">
+          <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+          <li class="breadcrumb-item active">Procesamiento & Status Encuesta</li>
+        </ol>
+      </nav>
+      <!--Title Section-->
+      <section class="titlesection row mt-2">
+        <h3>Procesamiento & Status de Encuesta</h3>
+
+      </section>
+
+
+
+      <!--Section Form + Advertise-->
+      <div class="row">
+
+      <!--Section Form-->
+
+
+      <div class="process_survey" > <!--delete_survey-->
+        <div class="form-row">
+            <!--Title Section Form-->
+            <div class="col-12 mt-4">
+              <h4 class="title-section">Comencemos</h4>
+            </div>
+            <!-- END Title Section Form-->
+            <div class="col-md-6 mb-3">
+              <label for="validationTooltip04">Selecciona la encuesta deseada y luego la accion que deseas realizar.</label>
+              <select class="custom-select" id="validationTooltip04" required>
+                <option selected disabled value="">Elegir...</option>
+                <option>2020-Q1</option>
+                <option>2020-Q2</option>
+                <option>2020-Q3</option>
+                <option>2020-Q4</option>
+              </select>
+              <small id="passwordHelpInline" class="text-muted">
+                Sólo aparecen tus encuestas creadas <a href="./manage_survey.html">aquí.</small>
+              <div class="invalid-tooltip">
+                Please select a valid state.
+              </div>
+            </div>
+          </div>
+        <!--Button Send-->
+
+
+          <button class="btn btn-primary btn-lg btn-block mt-3 col-md-6" aria-pressed="true" type="submit">Procesar </button>
+
+
+          <button class="btn btn-outline-primary btn-lg btn-block mt-3 mb- col-md-6" aria-pressed="true" type="submit">Check Status</button>
+
+      </div>
+    <!--End Section create survey-->
+
+
+
+
+
+      </form>
+    </div>
+    <!-- END Section Form-->
+
+    <!-- END Section Form + Advertise-->
+
+
+
+
+
+    <!--Script-->
+    <script src="js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="js/jquery.js" charset="utf-8"></script>
+    <script>
+    var select = document.getElementById('validationTooltip_selected');
+    var value = select.options[select.selectedIndex].value;
+    //Crear Encuesta
+    //create_survey
+    //Eliminar Encuesta
+    //delete_survey
+    function showDiv(divId,divId_2, element)
+        {
+          if(element.value == 'Crear Encuesta'){
+            document.getElementsByClassName(divId)[0].style.display = 'none';
+            document.getElementsByClassName(divId_2)[0].style.display = 'block';
+            }
+            else if (element.value == 'Eliminar Encuesta') {
+              document.getElementsByClassName(divId)[0].style.display = 'block';
+              document.getElementsByClassName(divId_2)[0].style.display = 'none';
+            }
+}
+
+
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+  </body>
+</html>

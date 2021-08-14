@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="user-scalable=no,maximum-scale=1.0,width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom-style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+
+  <title>Configuración de HeadCount</title>
+</head>
+  <body>
+    <!--Navbar-->
+        <nav class = "navbar navbar-dark navbar-custom navbar-expand-lg navbar-light bg-light" style="background:#0b3896;">
+          <a class= "navbar-brand" href="./index.html">Crosland</a>
+          <!--button responsive menu-->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" >
+            <span class="navbar-toggler-icon navbar-dark"></span>
+          </button>
+          <!---->
+          <div class="collapse navbar-collapse " id="navbarTogglerDemo011">
+
+              <ul class="nav navbar-nav ml-auto">
+
+                <li class="nav-item">
+                  <a class="nav-link" href="register.html">
+                    <i class="fas fa-user-plus"></i> 360 </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="login.html">
+                    <i class="fas fa-sign-in-alt"></i> Cerrar sesión</a>
+                </li>
+              </ul>
+            </div>
+
+        </nav>
+    <!--End Navbar-->
+
+    <div class="container">
+
+      <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb col-6 col-sm-6 col-md-3 col-lg-3" style="margin-top:20px;">
+          <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="./index_manage_survey.html">Conf. de Encuesta
+y Parámetros</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Encuesta</li>
+        </ol>
+      </nav>
+      <!--Title Section-->
+      <section class="titlesection row mt-2">
+        <h3>Configuración de HeadCount</h3>
+
+      </section>
+
+
+
+      <!--Section Form + Advertise-->
+      <div class="row">
+
+      <!--Section Form-->
+      <div class="form col col-md-9 col-sm-12 col-lg-9">
+        <form class="needs-validation" novalidate>
+          <div class="form-row">
+            <!--Title Section Form-->
+            <div class="col-12 mt-4">
+              <h4 class="title-section">Paso 1</h4>
+            </div>
+            <!-- END Title Section Form-->
+            <div class="col-md-6 mb-3">
+              <label for="validationTooltip04">¿Qué acción deseas realizar?</label>
+              <select class="custom-select" id="validationTooltip_selected" onchange="showDiv('update_hc','create_hc', this)" required>
+                <option selected disabled value="">Elegir...</option>
+                <option>Crear HeadCount</option>
+                <option>Actualizar Archivo HeadCount</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        </div>
+
+      <div class="update_hc" style="display:none;"> <!--delete_survey-->
+        <div class="form-row">
+          <!--Title Section Form-->
+          <div class="col-12 mt-4">
+            <h4 class="title-section">Paso 2</h4>
+          </div>
+          <!-- END Title Section Form-->
+          <div class="col-md-6 mb-3">
+            <label for="validationTooltip04">Selecciona el HeadCount a actualizar</label>
+            <select class="custom-select" id="validationTooltip04" required>
+              <option selected disabled value="">Elegir...</option>
+              <option>2020-Q1 | HC</option>
+              <option>2020-Q2 | HC</option>
+              <option>2020-Q3 | HC</option>
+              <option>2020-Q4 | HC</option>
+            </select>
+            <small id="passwordHelpInline" class="text-muted">
+              Sólo aparecen los HeadCounts creados</small>
+            <div class="invalid-tooltip">
+              Please select a valid state.
+            </div>
+          </div>
+        </div>
+      <!--Button Send-->
+      <button class="btn btn-primary mt-3 mb-5" type="submit">Actualizar HeadCount</button>
+    </div>
+    <!--End Section create survey-->
+
+
+    <div class="create_hc" style="display:none;">  <!--create_survey-->
+      <div class="form-row">  <!--Year select-->
+        <!--Title Section Form-->
+        <div class="col-12 mt-4">
+          <h4 class="title-section">Paso 2</h4>
+        </div>
+        <!-- END Title Section Form-->
+        <div class="col-md-6 mb-3">
+          <label for="validationTooltip04">Selecciona el año del HeadCount</label>
+          <select class="custom-select" id="validationTooltip04" required>
+            <option selected disabled value="">Elegir...</option>
+            <option>2020</option>
+            <option>2021</option>
+            <option>2022</option>
+            <option>2023</option>
+          </select>
+          <small id="passwordHelpInline" class="text-muted">
+            Sólo los Head Count cargados aquí.</small>
+          <div class="invalid-tooltip">
+            Please select a valid state.
+          </div>
+        </div>
+    </div>
+
+    <div class="form-row">  <!--Year Q-->
+
+      <div class="col-md-6 mb-3">
+        <label for="validationTooltip04">Selecciona el Q</label>
+        <select class="custom-select" id="validationTooltip04" required>
+          <option selected disabled value="">Elegir...</option>
+          <option>Q1</option>
+          <option>Q2</option>
+          <option>Q3</option>
+          <option>Q4</option>
+        </select>
+      </div>
+    </div>
+
+      <div class="form-row"><!--Upload HC-->
+      <div class="col-md-6 mb-3">
+        <label for="upload-hc">Selecciona el Head Count</label>
+        <input type="file" class="form-control form-control-lg" id="upload-hc" required>
+
+        <small id="passwordHelpInline" class="text-muted">
+          Sólo los Head Count cargados aquí.</small>
+        <div class="invalid-tooltip">
+          Please select a valid state.
+        </div>
+      </div>
+    </div>
+
+    <!--Button Send-->
+    <button class="btn btn-primary mt-3 mb-5" type="submit">Crear HeadCount</button>
+  </div>
+  <!--End Section create HC-->
+
+
+      </form>
+    </div>
+    <!-- END Section Form-->
+
+    <!-- END Section Form + Advertise-->
+
+
+
+    </div>
+
+    <!--Script-->
+    <script src="js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="js/jquery.js" charset="utf-8"></script>
+    <script>
+
+    //Crear Encuesta
+    //create_survey
+    //Eliminar Encuesta
+    //delete_survey
+
+    function showDiv(divId,divId_2, element)
+        {
+          console.log(element.value);
+          if(element.value == 'Crear HeadCount'){
+            console.log("update");
+            console.log(document.getElementsByClassName(divId)[0].style.display);
+            console.log(document.getElementsByClassName(divId_2)[0].style.display);
+            document.getElementsByClassName(divId)[0].style.display = 'none';
+            document.getElementsByClassName(divId_2)[0].style.display =  'block';
+            }
+            else if (element.value == 'Actualizar Archivo HeadCount') {
+              document.getElementsByClassName(divId)[0].style.display = 'block';
+              document.getElementsByClassName(divId_2)[0].style.display = 'none';
+            }
+
+        }
+
+
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+  </body>
+
+
+</html>
